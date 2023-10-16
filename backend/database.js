@@ -15,6 +15,9 @@ const pool = mysql.createPool({
 // Create a Sequelize instance
 const sequelize = new Sequelize({
   dialect: "mysql",
+  logging: (query) => {
+    console.log(query);
+  },
   database: "banking",
   username: "admin",
   password: "neil1234",

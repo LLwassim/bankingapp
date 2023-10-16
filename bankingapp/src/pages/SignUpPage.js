@@ -114,7 +114,7 @@ function SignUpPage() {
             required
           />
         </div>
-        <div>
+        {/* <div>
           <label>Account Type:</label>
           <select
             name="account_type"
@@ -126,7 +126,7 @@ function SignUpPage() {
             <option value="Checking">Checking</option>
             <option value="Savings">Savings</option>
           </select>
-        </div>
+        </div> */}
         <button type="submit">Sign Up</button>
       </form>
     </div>
