@@ -18,6 +18,9 @@ const sequelize = new Sequelize({
   logging: (query) => {
     console.log(query);
   },
+  define: {
+    timestamps: false, // Disable timestamps for all models
+  },
   database: "banking",
   username: "admin",
   password: "neil1234",

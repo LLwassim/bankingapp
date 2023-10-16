@@ -7,7 +7,6 @@ const User = sequelize.define(
     customer_id: {
       type: DataTypes.UUID,
       primaryKey: true,
-      autoIncrement: true,
       unique: true,
     },
     first_name: DataTypes.STRING,

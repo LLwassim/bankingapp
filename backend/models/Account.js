@@ -6,9 +6,9 @@ const Account = sequelize.define(
   "Account",
   {
     account_id: {
-      type: DataTypes.UUID,
+      type: DataTypes.UUID, // Set the data type to UUID
+      defaultValue: DataTypes.UUIDV4, // Use UUIDv4 as the default value
       primaryKey: true,
-      autoIncrement: true,
       allowNull: false,
     },
     customer_id: {
@@ -45,6 +45,7 @@ const Account = sequelize.define(
 
 // Define the foreign key relationship to the User model
 Account.belongsTo(User, { foreignKey: "customer_id" });
+User.hasMany(Account, { foreignKey: "customer_id" });
 
 // Export the Account model for use in other parts of your application
 module.exports = Account;
