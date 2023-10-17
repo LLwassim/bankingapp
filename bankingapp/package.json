@@ -1,7 +1,7 @@
 {
   "name": "bankingapp",
   "version": "0.1.0",
-  "homepage": "https://LLwassim.github.io/bankingapp/bankingapp",
+  "homepage": "https://LLwassim.github.io/bankingapp/bankingapp/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
