@@ -1,8 +1,10 @@
 const express = require("express");
 const mysql = require("mysql");
 const app = express();
-const port = 5001; // Choose a port number
+const port = 5001;
 const cors = require("cors");
+require("dotenv").config();
+
 app.use(
   cors({
     origin: "http://localhost:3000", // Update with your React app's URL
@@ -11,10 +13,10 @@ app.use(
   })
 );
 const db = mysql.createConnection({
-  host: "banking-app.cs4588usvttt.us-east-2.rds.amazonaws.com",
-  user: "admin",
-  password: "neil1234",
-  database: "banking",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB,
 });
 const usersRouter = require("./routes/users");
 

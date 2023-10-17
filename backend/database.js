@@ -1,12 +1,13 @@
-const { Sequelize } = require("sequelize"); // Import Sequelize
+const { Sequelize } = require("sequelize");
 const mysql = require("mysql2");
+require("dotenv").config();
 
 // Create a connection pool
 const pool = mysql.createPool({
-  host: "banking-app.cs4588usvttt.us-east-2.rds.amazonaws.com",
-  user: "admin",
-  password: "neil1234",
-  database: "banking",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
