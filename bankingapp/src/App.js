@@ -7,7 +7,7 @@ import SignUpPage from "./pages/SignUpPage";
 
 function App() {
   return (
-    <Router>
+    <Router basname="/bankingapp/bankingapp">
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
